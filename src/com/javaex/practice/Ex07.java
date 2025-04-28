@@ -23,18 +23,20 @@ public class Ex07 {
 		wonArray[9] = 1;
 		
 		
-		System.out.print("금액: ");
+		System.out.print("금액을 입력하세요: ");
 		int money = sc.nextInt();
-		int sum = 0;
+		
 		
 		
 	
 		
-		//System.out.println(wonArray[0] + "원: " + money/wonArray[0] + "개");
-		for(int i=1; i<wonArray.length; i++) {
+		
+		for(int i=0; i<wonArray.length; i++) {
 			
+			int count = money / wonArray[i];
+			money = money % wonArray[i];
+			System.out.println(wonArray[i] + "원: " + count + "개" );
 			
-			System.out.println( ( wonArray[i] ) +"원: "+ sum/wonArray[i]  +"개");
 		}
 		
 		
